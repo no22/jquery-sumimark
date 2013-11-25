@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery.sumimark Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .sumi-box img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 100%;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">jQuery.sumimark</a>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1></h1>
+            <p>jQuery.sumimarkは画像の上に「済」の字をのせるだけの簡単なお仕事をこなすjQueryプラグインです。</p>
+            <p><small>※「済」以外の文字や画像をかわりにのせることもできます。</small></p>
+            <pre class="prettyprint">
+
+    // 「済」をのせる
+    $('img').sumimark();
+
+    // 「秘」をのせる
+    $('img').sumimark({mark: '秘'});
+
+    // 「萌」をのせて色を変える
+    $('img').sumimark({
+        mark: '萌',
+        markCss: {
+            'border-color': '#ff7fbf',
+            'color': '#ff7fbf'
+        }
+    });
+
+    // 画像をのせる
+    $('img').sumimark({
+        mark: $('&lt;img src="img/sumi.png" /&gt;')
+    });
+            </pre>
+            <p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/no22/jquery-sumimark">Fork me on GitHub &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="済" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>済み画像</h3>
+                        <p>済みマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="秘" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>秘密画像</h3>
+                        <p>マル秘マーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="萌" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>萌え画像</h3>
+                        <p>萌えマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="済" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>済み画像</h3>
+                        <p>済みマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="画" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>済み画像</h3>
+                        <p>画像の済みマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/320/240" alt="済" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>済み画像</h3>
+                        <p>済みマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+
+       <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/480/320" alt="" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>通常</h3>
+                        <p>通常の画像です。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="http://placekitten.com/480/320" alt="済" title="" class="img-responsive" />
+                    <div class="caption">
+                        <h3>済み画像</h3>
+                        <p>済みマーク画像です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <p>Random images from <a href="http://placekitten.com/">placekitten.com</a></p>
+            <p>Copyright &copy; 2013 Hiroyuki OHARA Licensed under the MIT license.</p>
+        </footer>
+    </div> <!-- /container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="../jquery.sumimark.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // 「済」をのせる
+            $('img[alt="済"]').sumimark();
+            // 「秘」をのせる
+            $('img[alt="秘"]').sumimark({mark: '秘'});
+            // 「萌」をのせて色を変える
+            $('img[alt="萌"]').sumimark({
+                mark: '萌',
+                markCss: {
+                    'border-color': '#ff7fbf',
+                    'color': '#ff7fbf'
+                }
+            });
+            // 画像をのせる
+            $('img[alt="画"]').sumimark({
+                mark: $('<img src="img/sumi.png" />')
+            });
+        });
+    </script>
+</body>
+</html>
